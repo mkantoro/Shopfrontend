@@ -1,0 +1,20 @@
+<header flexLayout="column" fxLayoutAlign="start center">
+    <div fxFlex fxLayoutAlign="start end" fxLayoutGap="10">
+        <mat-icon color="accent" class="logoicon">store</mat-icon>
+        <span class="logo">Shop panel</span>
+    </div>
+</header>
+<div flexLayout="row" fxFlex>
+    <div>
+        <div fxFlex class="sidebar">
+            <mat-selection-list [multiple]="false">
+                <mat-list-option><a routerLink="/admin">Dashboard</a></mat-list-option>
+                <mat-list-option><a routerLink="/admin">Produkty</a></mat-list-option>
+                <mat-list-option><a routerLink="/admin">Link</a></mat-list-option>
+              </mat-selection-list>
+        </div>
+    </div>
+    <div fxFlex class="content">
+        <router-outlet></router-outlet>
+    </div>
+</div>
