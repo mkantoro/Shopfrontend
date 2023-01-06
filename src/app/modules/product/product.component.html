@@ -18,9 +18,10 @@
         <button mat-flat-button color="primary">Do koszyka</button>
     </mat-card-actions>
 </mat-card>
-<mat-paginator *ngIf="page && page.totalElements > 0" [length]="page?.totalElements"
-              [pageSize]="10"
-              [pageSizeOptions]="[5, 25, 50]"
-              aria-label="Wybierz strone"
-              (page)="onPageEvent($event)">
+<mat-paginator *ngIf="page && page.totalElements > 0" 
+            [length]="page.totalElements"
+            [pageSize]="10"
+            [pageSizeOptions]="[5, 25, 50]"
+            aria-label="Wybierz strone"
+            (page)="onPageEvent($event)">
 </mat-paginator>
